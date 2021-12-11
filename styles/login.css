@@ -22,53 +22,42 @@ body{
     display: grid;
     grid-template-rows: auto 1fr auto;
     width: 300px;
-    justify-items: center;
 }
 
 .logo{
     margin-bottom: 48px;
     justify-self: center;
+    display: none;
 }
 
-.title{
-    font-size: var(--lg);
-    margin-bottom: 12px;
-    text-align: center;
-}
-.subtitle{
-    color: var(--very-light-pink);
-    font-size: var(--md);
-    font-weight: 300;
-    margin-top: 0;
-    margin-bottom: 40px;
-    text-align: center;
-}
-.email-image{
-    width: 132px;
-    height: 132px;
-    border-radius: 50%;
-    background-color: var(--text-input-field);
+.form{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 24px;
+    flex-direction: column;
 }
 
-.email-image svg{
-    width: 80px;
-}
-
-.resend{
-    font-size: var(--sm);
-}
-
-.resend span{
-    color: var(--very-light-pink);
-}
-
-.resend a{
+.form a{
     color: var(--hospital-green);
+    font-size: var(--sm);
+    text-align: center;
     text-decoration: none;
+    margin-bottom: 58px;
+    margin-top: 18px;
+}
+
+.label{
+    font-size: var(--sm);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.input{
+    background-color: var(--text-input-field);
+    border:none;
+    border-radius: 10px;
+    height: 30px;
+    font-size: var(--md);
+    padding: 8px;
+    margin-bottom: 18px;
 }
 
 .primary-button{
@@ -83,8 +72,23 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 
+.secondary-button{
+    background-color: var(--white);
+    border-radius: 10px;
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+}
+
 @media (max-width: 640px){
     .logo{
         display: block;
+    }
+    .secondary-button{
+        margin-top: 100px;
     }
 }
